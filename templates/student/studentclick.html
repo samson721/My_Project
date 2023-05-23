@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+<style>{
+    a{
+        text-decoration: none;
+    }
+    .primary{
+        padding: 10px 20px;
+        background-color: #25da9d7c;
+        color: #414141;
+        font-size: 40px;
+        font-weight: 500;
+        width: 30px;
+    }
+    .success{
+        padding: 10px 20px;
+        background-color: #1fd819;
+        color: #414141;
+        font-size: 40px;
+        width: 30px;
+        font-weight: 500;
+    }
+}
+</style>
+
+<body>
+
+  {% include "exam/navbar.html" %}
+<br>
+<br><br>
+    <section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center">
+        <div class="container text-center">
+          <h2 class="h2">Welcome Students</h2>
+          <h3 class="h3">Lets start your Journey</h3>
+          
+          <hr>
+      
+          <p>Get the access to System choose one of following options </p>
+            <br>
+            <br>
+            <br>
+          <p class="load">
+              <a class = "btn btn-primary" href="studentsignup" role="button">Sign Up</a> </nbsp></nbsp></nbsp>
+              <a class = "btn btn-success" href="studentlogin" style="border-radius: 0%;" role = "button">Log In</a>
+          </p>
+      
+          
+          <br><br><br>
+        </div>  
+      </section>
+  
+  
+  {% include "exam/footer.html" %}
+
+
+</body>
+
+</html>
+

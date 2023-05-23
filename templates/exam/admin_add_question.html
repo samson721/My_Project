@@ -1,0 +1,64 @@
+{% extends 'exam/adminbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  a:link {
+        text-decoration: none;
+      }
+    
+  </style>
+</head>
+
+<h2 style="text-align:center;">Add Question</h2>
+<form method="post" autocomplete="off" style="margin:100px;margin-top: 0px;">
+    {% csrf_token %}
+    <div class= "form-group">
+
+        
+        <label for="question">Course</label>
+        {% render_field questionForm.courseID|attr:'required:true' class="form-control" %}
+        <br>
+        
+        <label for="question">Question</label>
+        {% render_field questionForm.question|attr:'required:true' class="form-control" placeholder="Where does the static variables stroed in memory " %}
+        <br>
+        
+        <label for="question">Marks</label>
+        {% render_field questionForm.marks|attr:'required:true' class="form-control" placeholder="Example: 4" %}
+        <br>
+        
+        <label for="question">Option 1</label>
+        {% render_field questionForm.option1|attr:'required:true' class="form-control" placeholder="Example: heap" %}
+        <br>
+        
+        <label for="question">Option 2</label>
+        {% render_field questionForm.option2|attr:'required:true' class="form-control" placeholder="Example: Stack" %}
+        <br>
+        
+        <label for="question">Option 3</label>
+        {% render_field questionForm.option3|attr:'required:true' class="form-control" placeholder="Example: main memory" %}
+        <br>
+        
+        <label for="question">Option 4</label>
+        {% render_field questionForm.option4|attr:'required:true' class="form-control" placeholder="Example: secondary memory" %}
+        <br>
+
+        <label for="question">Correct Answer</label>
+        {% render_field questionForm.answer|attr:'required:true' class="form-control"  %}
+        <br>
+
+        <button type="submit" class="btn btn-primary" style="border-radius:0px;">Submit</button>
+    </div>
+</form>
+<br><br>
+{% endblock content %}

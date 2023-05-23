@@ -1,0 +1,67 @@
+{% extends 'exam/adminbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+
+<head>
+    <style media="screen">
+      input[type=text], select,input[type=number] ,input[type=password], textarea{
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+  
+    input[type=submit] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+  
+  
+    </style>
+  
+  
+  </head>
+  
+  <br><br>
+  <h2 style="text-align:center;">Update Student</h2>
+
+  <form method="POST" autocomplete="off" style="margin:100px;margin-top: 0px;">
+    {%csrf_token%}
+    <div class="form-group">
+      <label for="course_name">Course Name</label>
+      {% render_field courseForm.course_name class="form-control" placeholder="Example: Data Scince" %}
+      
+      <label for="course_code">Course Code</label>
+      {% render_field courseForm.course_code class="form-control" placeholder="Example: PYT36TP" %}
+
+      <label for="question_number">Total Question</label>
+      {% render_field courseForm.question_numbers class="form-control" placeholder="Example: 20" %}
+
+      <label for="total_marks">Total Marks</label>
+      {% render_field courseForm.total_marks class="form-control" placeholder="Example: 100" %}
+    </div>
+    
+
+    <button type="submit" class="btn btn-success" style="border-radius:0px;">Add Course Info</button>
+  </form>
+
+  
+
+  <br><br><br><br><br><br>
+
+{% endblock content %}
+
+

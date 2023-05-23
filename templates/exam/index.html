@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<style>
+  .jumbotron{
+    margin-bottom: 0px;
+  }
+
+  .display-3 text-info{
+     color:black;
+  }
+
+</style>
+<body>
+  {% include "exam/navbar.html" %}
+<br>
+<section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center">
+  <div class="container text-center">
+    <h2 class="display-3 text-info">Welcome to Online Exams</h2>
+    <p class="display-4 d-none d-sm-block"> Examinations in online Mode!</p>
+    <p class="lead">Hope you have preapred well</p>
+
+  
+    <p><strong> Start Your Journey </strong></p>
+    <a href="student/studentsignup" class="btn btn-lg btn-success" style="padding-right: 35px; border-radius: 0%;">Sign Up as Student</a>
+    
+    <br><br><br><br><br><br>
+  </div>  
+</section>  
+  
+  
+  {% include "exam/footer.html" %}
+
+
+</body>
+
+</html>
